@@ -24,18 +24,15 @@ prodType = []
 for x in range(num):
 
     if(len(LHS[x]) == 1 ):
-        if((len(RHS[x]) == 1 and RHS[x].islower() == True) or (( RHS[x][0].islower() == True) and RHS[x][1].isupper() == True)): # single terminal or ( single terminal + single non terminal )
-            t = 3                       # type 3
-            prodType.append(t)
-        else :
-            t = 2                       # type 2
-            prodType.append(t)
+        if((len(RHS[x]) == 1 and RHS[x].islower() == True) or (( RHS[x][0].islower() == True) and RHS[x][1].isupper() == True)): # single terminal or ( single terminal + single non terminal )                    
+            prodType.append(3)          # type 3
+        else :                      
+            prodType.append(2)          # type 2
     elif (len(RHS[x]) > len(LHS[x])):   # comparing RHS and LHS length
-        t = 1                           # type 1
-        prodType.append(t)
-    else :
-        t = 0                           # type 0
-        prodType.append(t)
+                          
+        prodType.append(1)              # type 1
+    else :                          
+        prodType.append(0)              # type 0
 
 print("")
 
